@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS hazards (
     location_name VARCHAR(255) NOT NULL,
     latitude DECIMAL(10, 8) NOT NULL,
     longitude DECIMAL(11, 8) NOT NULL,
-    hazard_type ENUM('landslide', 'flood', 'road_closure', 'other') NOT NULL,
+    hazard_type VARCHAR(100) NOT NULL,
     reporter_name VARCHAR(100) NOT NULL,
     report_date DATETIME NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
