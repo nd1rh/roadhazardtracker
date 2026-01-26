@@ -19,13 +19,13 @@
                 <div class="col-md-3">
                     <label class="form-label fw-semibold">Latitude</label>
                     <input type="number" step="any" class="form-control" name="latitude"
-                        placeholder="e.g. 3.1415" required>
+                        placeholder="e.g. 3.1415 (Refer to Google Maps)" required>
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-label fw-semibold">Longitude</label>
                     <input type="number" step="any" class="form-control" name="longitude"
-                        placeholder="e.g. 101.6869" required>
+                        placeholder="e.g. 101.6869 (Refer to Google Maps)" required>
                 </div>
             </div>
 

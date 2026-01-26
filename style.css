@@ -22,6 +22,7 @@ body,
 body {
     background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
     min-height: 100vh;
+    margin-bottom: 50px;
 }
 
 .navbar {
