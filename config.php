@@ -1,4 +1,5 @@
 <?php
+session_start();
 // config.php
 $host = 'localhost';
 $dbname = 'hazard_tracker';

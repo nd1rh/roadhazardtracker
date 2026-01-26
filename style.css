@@ -1,0 +1,136 @@
+body,
+.card,
+.navbar,
+.form-control,
+.form-select,
+.table {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, #4b5563, #6b7280);
+}
+
+.form-label {
+    font-size: 0.9rem;
+}
+
+.card-body {
+    background: transparent;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #495057, #6c757d);
+}
+
+h2 {
+    font-weight: 700;
+    color: #343a40;
+}
+
+p {
+    color: #6c757d;
+}
+
+.card {
+    border-radius: 14px;
+    border: none;
+}
+
+.card-header {
+    font-weight: 600;
+    border-radius: 14px 14px 0 0 !important;
+}
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.btn-success {
+    border-radius: 30px;
+    padding: 8px 22px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1c1f26, #121417);
+    color: #e4e6eb;
+}
+
+body.dark-mode .navbar {
+    background: linear-gradient(90deg, #111827, #1f2933) !important;
+}
+
+body.dark-mode h2 {
+    color: #f3f4f6;
+}
+
+body.dark-mode p {
+    color: #d1d5db;
+}
+
+body.dark-mode .card {
+    background-color: #1f2933;
+    color: #e4e6eb;
+}
+
+body.dark-mode .card-header {
+    background: linear-gradient(90deg, #111827, #1f2933);
+    color: #ffffff;
+}
+
+body.dark-mode .table {
+    color: #e4e6eb;
+}
+
+body.dark-mode .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #111827;
+    color: #e4e6eb;
+    border-color: #374151;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #9ca3af;
+}
+
+body.dark-mode .btn-success {
+    background-color: #22c55e;
+    border: none;
+}
+
+body.dark-mode .btn-outline-secondary {
+    color: #e4e6eb;
+    border-color: #6b7280;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+thead.sticky-top {
+    z-index: 1;
+}
+
+.badge {
+    border-radius: 12px;
+    padding: 6px 10px;
+}
