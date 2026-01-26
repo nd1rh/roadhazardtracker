@@ -14,7 +14,6 @@ $all_hazards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="card-body p-0">
-
         <div class="table-responsive" style="max-height: 420px; overflow-y: auto;">
             <table class="table table-striped table-hover mb-0 align-middle">
                 <thead class="table-light sticky-top">
