@@ -7,7 +7,6 @@ $all_hazards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Card Header -->
     <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
-        <span>Reported Road Hazards</span>
         <a href="api.php" target="_blank" class="btn btn-sm btn-outline-light">
             View JSON API
         </a>
@@ -16,13 +15,14 @@ $all_hazards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="card-body p-0">
         <div class="table-responsive" style="max-height: 420px; overflow-y: auto;">
             <table class="table table-striped table-hover mb-0 align-middle">
-                <thead class="table-light sticky-top">
+                <thead class="table-secondary sticky-top">
                     <tr>
                         <th>Date</th>
                         <th>Location</th>
                         <th>Hazard Type</th>
                         <th>Coordinates</th>
                         <th>Reporter</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +45,12 @@ $all_hazards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 </td>
                                 <td>
                                     <?= htmlspecialchars($row['reporter_name']) ?>
+                                </td>
+                                <td>
+                                    <a href="delete_report.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger"
+                                        onclick="return confirm('Are you sure you want to delete this report?');">
+                                        Delete
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

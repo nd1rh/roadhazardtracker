@@ -6,9 +6,8 @@ require_once 'config.php';
 header('Content-Type: application/json');
 
 try {
-    // Select records ONLY from the last 36 hours
+    // Select all records
     $sql = "SELECT * FROM hazards 
-            WHERE report_date >= NOW() - INTERVAL 36 HOUR 
             ORDER BY report_date DESC";
 
     $stmt = $pdo->prepare($sql);

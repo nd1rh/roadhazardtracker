@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['admin_logged_in'])) {
+    header("Location: admin_login.php");
+    exit;
+}
+
 require_once 'config.php';
 ?>
 
@@ -29,36 +36,31 @@ require_once 'config.php';
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
-                <button id="darkModeToggle" class="btn btn-sm btn-outline-light mt-2 mt-lg-0">
+                <a href="dashboard.php" class="btn btn-sm btn-outline-light mt-2 mt-lg-0 ms-2">
+                    Dashboard
+                </a>
+                <a href="admin_details.php" class="btn btn-sm btn-outline-light mt-2 mt-lg-0 ms-2">
+                    Admin Details
+                </a>
+                <a href="reported_list.php" class="btn btn-sm btn-outline-light mt-2 mt-lg-0 ms-2">
+                    Reports
+                </a>
+                <button id="darkModeToggle" class="btn btn-sm btn-outline-light mt-2 mt-lg-0 ms-2">
                     🌙 Dark Mode
                 </button>
+                <a href="admin_logout.php" class="btn btn-sm btn-outline-light mt-2 mt-lg-0 ms-2">
+                    Logout
+                </a>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
-        <h2 class="mb-1">Road Hazard Reporting System</h2>
-        <p class="mb-4">
-            Report road hazards in real-time to improve public safety
-        </p>
+        <h2 class="mb-4">Road Hazard Reported List</h2>
 
-        <?php if (isset($_SESSION['success'])): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <?= $_SESSION['success']; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php unset($_SESSION['success']); ?>
-        <?php endif; ?>
+        <?php include 'hazard_table.php'; ?>
 
-        <?php if (isset($_SESSION['error'])): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <?= $_SESSION['error']; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php unset($_SESSION['error']); ?>
-        <?php endif; ?>
-
-        <?php include 'hazard_form.php'; ?>
+        <a href="dashboard.php" class="btn btn-secondary mt-3">Back to Dashboard</a>
 
         <p class="text-center mt-3 small">
             Road Alert Tracker © <?= date('Y') ?>
